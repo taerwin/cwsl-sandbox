@@ -37,35 +37,32 @@ class FieldAggregation(vistrails_module.Module):
     """
 
     _input_ports = [('in_dataset', 'csiro.au.cwsl:VtDataSet'),
-                    ('agg_method', basic_modules.Float),
+                    ('method', basic_modules.String),
                    ]
 
     _output_ports = [('out_dataset', 'csiro.au.cwsl:VtDataSet')]
     
     _execution_options = {'required_modules': ['cdo',]}
 
-    _data_type = 'default'
-
-    command = '${CWSL_CTOOLS}/aggregation/cdo_sellonlatbox.sh'
-    keyword_args = {}
+    command = '${CWSL_CTOOLS}/aggregation/cdo_field_agg.sh'
 
     def __init__(self):
 
-        super(LocateIsotherm, self).__init__()
-        self.out_pattern = PatternGenerator('user', self._data_type).pattern
+        super(FieldAggregation, self).__init__()
+        self.out_pattern = PatternGenerator('user', 'default').pattern
 
     def compute(self):
 
         in_dataset = self.getInputFromPort('in_dataset')
-        agg_method = self.getInputFromPort('agg_method')
+        method = self.getInputFromPort('method')
 
-        self.positional_args = [('agg_method', 0), ]
+        self.positional_args = [(method, 0, 'raw'), ]
         self.keyword_args = {}
 
-        if len(agg_method.split(',')) > 1:
-            agg_constraint = "".join(agg_method.split(','))
+        if len(method.split(',')) > 1:
+            agg_constraint = "".join(method.split(','))
         else:
-            agg_constraint = agg_method
+            agg_constraint = method
 
         new_constraints_for_output = set([Constraint('lonagg_info', [agg_constraint]),
                                           Constraint('latagg_info', [agg_constraint]),
@@ -81,8 +78,8 @@ class FieldAggregation(vistrails_module.Module):
 
         try:
             this_process.execute(simulate=configuration.simulate_execution)
-        except subprocess.CalledProcessError, e:
-            raise vistrails_module.ModuleError(self, e.output)
+        except Exception as e:
+            raise vistrails_module.ModuleError(self, repr(e))
             
         process_output = this_process.file_creator
 
