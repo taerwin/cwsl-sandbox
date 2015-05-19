@@ -16,7 +16,7 @@ See [here](https://github.com/CWSL/cwsl-mas/wiki/Connecting-to-the-CWSLab) for i
 * Task 3: Configure vistrails (instructions [here](https://github.com/CWSL/cwsl-mas/wiki/Configuration))
 * Demonstration: Everyone follows along on their own laptop as I construct an example oceanography workflow
   * Point out the workflow design features (modules do single discrete things, etc)
-  * Explore the provenance information (code and data) that is available after you run a workflow
+  * Explore the [provenance information](https://github.com/CWSL/cwsl-mas/wiki/Metadata) that is available after you run a workflow
 * Task 4: I'll guide everyone through the process of writing their own module (following [these instructions](https://github.com/CWSL/cwsl-mas/wiki/Adding-modules)):
   * Participants should pick a simple module like a bash script that implements `cdo trend` or `cdo mul/add/sub/divc`. Along the way they will be introduced to basic GitHub usage and will submit a pull request for their new module which I will review on the spot.
 * Concluding remarks:
