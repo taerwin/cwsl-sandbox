@@ -2,7 +2,7 @@
 
 #### Pitch
 
-The CWSLab workflow tool: A solution to the duplication of effort in climate data analysis
+*The CWSLab workflow tool: A solution to the duplication of effort in climate data analysis*
 
 Duplication of effort has always been a problem in the weather and climate sciences. 
 You've downloaded a copy of some CMIP5 data (for example) onto your computer, 
