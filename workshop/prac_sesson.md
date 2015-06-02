@@ -18,6 +18,6 @@ Follow these instructions: https://github.com/CWSL/cwsl-mas/wiki/Adding-modules
 
 Ideas: 
 * A bash script that implements `cdo trend`, `cdo mulc/addc/subc/divc`, `cdo eof`
-* We can setup the wrapper for a script you'll write at a later date
+* Write the wrapper for a script you'll write at a later date
 
 
