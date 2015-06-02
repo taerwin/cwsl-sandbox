@@ -1,6 +1,16 @@
-## Overview of the [CWS Lab](http://cwslab.nci.org.au/)
+## The CWSLab workflow tool
 
-* Goes back to the CMIP5 *data duplication* panic (~2010-11). There was concern about
+#### Title slide
+
+* Doing a PhD at UniMelb
+* Prior to that worked at CSIRO in Aspendale
+  * Part support staff role 
+  * Worked on beginnings of CWS Lab workflow tool (wasn't called that back then)
+* Jaci offered me a month of paid work to make the tool usable for her team
+
+#### The data duplication panic
+
+* Goes back to impending CMIP5 data arrival (~2010-11). There was concern about
   two types of duplication:
   * Download duplication
   * Processing duplication (e.g. someone has already regridded to a 1 by 1 deg grid)
@@ -12,7 +22,9 @@
   * Computational infrastucture (on top of data storage):
     * Raijin: for complex computational tasks
     * NCI High Performance cloud: scalable platform for data-intensive tasks and workflows
-    * CWS Virtual Desktop: general data analysis
+    * CWS Virtual Desktop: 
+      * For general data analysis
+      * Has IPython notebook, MATLAB, VisTrails, UV-CDAT (better solution for these than X11 forwarding)
       * 4 core, 20 GB RAM, 66GB storage = better than your laptop
 
 * That was kind of the easy part -> no input / change of behaviour required on the part of scientists
@@ -29,35 +41,44 @@
   * Data processing duplication
   * Code duplication
     * Great resource for new staff / students
+  * Reproducibility 
+    * Lots of editorials point towards the reproducibility crisis in computational research,
+      but nothing is changing
+    * My PhD shows:
+      * Minimum requirements are software description, public code repo and log files
+      * It's not that easy (show a makefile and FigShare page)
+    * An automated process would help enormously
   * Code review
     * Professional software developers do this all the time, scientists never do
     * When they do, the benefits are huge: 
       * https://www.mozillascience.org/code-review-for-scientists-findings-strategies
       * https://mozillascience.github.io/codeReview/intro.html
       * http://arxiv.org/pdf/1407.5648v2.pdf
-  * Reproducibility 
-    * Lots of editorials point towards the reproducibility crisis in computational research,
-      but nothing is changing
-    * My PhD: It's not that easy (show a makefile)
-    * An automated process would help enormously
 
 * Addressed by a third key component of the CWS Lab: the workflow tool
 
-#### Workflow tool demo
+#### The workflow tool
 
-* Demonstrate a simple workflow step by step
-  * Including [provenance information](https://github.com/CWSL/cwsl-mas/wiki/Metadata)
-* Show a more complex pre-built workflow
+* Home: https://github.com/CWSL
+  * cwsl-ctools = shared data analysis code
+  * cwsl-mas = VisTrails plugin + wiki documentation
+  * cwsl-workflows = example workflows
+* Examples: 
+  * Nino 3.4 step by step
+    * Mention provenance information 
+  * CMIP3/5 field correlation load existing workflow
+* Context: Batch processing, not exploratory data analysis
 * Contributing your own modules (https://github.com/CWSL/cwsl-mas/wiki/Adding-modules)
   * Write a script that parses the command line
   * Write a wrapper
   * Submit a pull request (if it would be of use to wider audience) 
 
-* Who built this? Where can I get assistance?
- * David Kent, Tim Erwin, Tim Bedin (and more recently myself)
-   * Their time is limited and inconsistent
-   * Community approach to [help/assistance](https://github.com/CWSL/cwsl-mas/wiki/Getting-help): discuss GitHub and help (Gitter, GitHub issue process)
 
+* Who built this?
+  * Tim Erwin, Tim Bedin (David Kent, Damien Irving)
+  * Their time is limited and inconsistent
+* Community help approach
+  
 
 #### Next step: A community of users
 
