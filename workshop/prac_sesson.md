@@ -1,4 +1,4 @@
-## Practical sesson: How to write your own modules
+## Practical sesson
 
 Note that all participants should be able to access to the NCI Virtual Desktop environment from their laptop. 
 See [here](https://github.com/CWSL/cwsl-mas/wiki/Connecting-to-the-CWSLab) for instructions.
@@ -12,7 +12,9 @@ Follow these instructions (install from source): https://github.com/CWSL/cwsl-ma
 
 Follow these instructions: https://github.com/CWSL/cwsl-mas/wiki/Configuration
 
-#### Task 3: Write a module 
+#### Task 3: Create your own workflow using the existing modules
+
+#### Task 4: Write a new module and incorporate it into a workflow 
 
 Follow these instructions: https://github.com/CWSL/cwsl-mas/wiki/Adding-modules
 
