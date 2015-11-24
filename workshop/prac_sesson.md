@@ -12,9 +12,13 @@ Follow these instructions (install from source): https://github.com/CWSL/cwsl-ma
 
 Follow these instructions: https://github.com/CWSL/cwsl-mas/wiki/Configuration
 
-#### Task 3: Create your own workflow using the existing modules
+#### Task 3: Run a existing workflow
 
-#### Task 4: Write a new module and incorporate it into a workflow 
+https://github.com/CWSL/cwsl-workflows
+
+#### Task 4: Create your own workflow using the existing modules
+
+#### Task 5: Write a new module and incorporate it into a workflow 
 
 Follow these instructions: https://github.com/CWSL/cwsl-mas/wiki/Adding-modules
 
