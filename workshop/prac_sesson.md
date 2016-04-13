@@ -8,7 +8,7 @@ See [here](https://github.com/CWSL/cwsl-mas/wiki/Connecting-to-the-CWSLab) for i
 
 Use BasicModules and PythonCalc to add two numbers
 
-#### Task 2: Install the CWSLab Workflow Plugin
+#### Task 2: Parameter Exploration
 
 Modify the contourf worklow (/opt/cloudapps/vistrails/2.1.2/examples/matplotlib/countourf.vt) to allow parameter exploration on the bivariate_normal function bivariate_normal(X, Y, sigmax=1.0, sigmay=1.0, mux=0.0, muy= 0.0, sigmaxy=0.0)
 
